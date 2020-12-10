@@ -1,0 +1,863 @@
+@font-face {
+    font-family: Noto Sans SC;
+    src: url(./assets/fonts/Nato-sans-sc/NotoSansSC-Regular.otf);
+   }
+@font-face {
+    font-family: Noto Sans SC Bold;
+    src: url(./assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
+}
+/* Боковое навигационное меню */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 ширина - изменить это с помощью JavaScript */
+    position: fixed; /* Оставайтесь на месте */
+    z-index: 3000; /* Оставайтесь сверху */
+    top: 0; /* Оставайтесь наверху */
+    right: 0;
+    background: #FFFFFF; /* Фон черный*/
+    overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+    padding-top: 60px; /* Поместите контент в 60px сверху */
+    transition: 0.5s; /* 0.5 второй эффект перехода слайда в боковой навигации */
+  }
+  
+  /* Ссылки меню навигации */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* Когда вы наводите курсор мыши на навигационные ссылки, изменяется их цвет */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Положение и стиль кнопки закрытия (верхний правый угол) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Стиль содержимого страницы - используйте это, если вы хотите сдвинуть содержимое страницы вправо при открытии боковой навигации */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* На экранах меньшего размера, где высота меньше 450px, измените стиль sidenav (меньше отступов и меньший размер шрифта) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+body{
+    margin: 0;
+    padding: 0;
+    background: #E5E5E5;
+}
+#header,#about-us,#what-we-offer,#benefits-to-you,#our-projects{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#nav{
+    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
+    background-blend-mode: color, normal;
+    opacity: 0.87;
+    position: fixed;
+    z-index: 3000;
+    width: 100%;
+    height: 67px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#toggle{
+    justify-self: flex-end;
+    grid-row: 1;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 10px 20px;
+    display: none;
+}
+#toggle span{
+    font-size: 24px;
+}
+#telephone,#nav-pages{
+    grid-row: 1;
+}
+#telephone{
+    margin: 0% 0% 0% 9.44%;
+    font-family: Noto Sans SC Bold;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    justify-self: flex-start;
+}
+#nav-pages{
+    justify-self: flex-end;
+    margin: 0 25px;
+}
+#nav-pages a{
+    font-family: Noto Sans SC;
+    font-weight: normal;
+    margin: 0px 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#header{
+    background-image: url(./assets/img/Rectangle\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 931px;
+}
+#header #title h1{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10vh;
+    line-height: 139px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 6px 0px 0px rgba(255, 33, 33, 0.25), -8px 0px 0px rgba(27, 100, 209, 0.26);
+    color: #FFFFFF;
+    margin: 0;
+}
+#header #title h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 52px;
+    text-align: center;
+    color: #F0EFEF;
+    margin: 0;
+}
+#header #subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+
+}
+#header #subtitle h4{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 41px;
+    margin: 0 20px;  
+    text-align: center;  
+    color: #F0EFEF;
+}
+#header #subtitle hr{
+    width: 89px;
+    height: 0px;
+    opacity: 0.5;
+    border: 2px solid #FFFFFF;
+    margin: 0;
+}
+#header #logos{
+    display: flex;
+    justify-content: center;
+}
+#header #logos .logo{
+    margin: 0px 20px;
+}
+#about-us{
+    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.16) 4.85%, rgba(43, 102, 255, 0.1425) 98.69%), #EEEAF1;
+    background-blend-mode: color, normal;
+}
+#about-us h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 70px;
+    margin-top: 37px;
+    text-align: center;
+    color: #272727;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#about-us h6{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin:0px 0px 110px 0px;
+    color: #7B7581;
+}
+#about-us #text{
+    width: 524px;
+    height: 397px;   
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;  
+    color: #000000;
+    margin-top: 20px;
+    z-index: 100;
+    grid-row: 1/1;
+    grid-column: 1/1;
+    position: relative;
+    bottom: 57%;
+}
+#about-us #people{
+    z-index: 200;
+    position: relative;
+    left: 30px;
+}
+#about-us #head-span{
+    margin:0px 33px 0px 64px;
+}
+#about-us p,#head-span{
+    display: inline-block;
+}
+#about-us #images{
+    display: grid;
+    justify-items: center;
+    align-items: flex-end;
+}
+#about-us #elipse-1,#elipse-2,#elipse-3,#people{
+grid-row: 1/1;
+grid-column: 1/1;
+}
+#about-us #people img{
+    width: 94vw;
+    max-width: 1440px!important;
+}
+#about-us #elipse-1 img{
+    width: 74vw;
+    max-width: 1152px!important;
+}
+#about-us #elipse-2 img{
+    width: 56vw;
+    max-width: 864px!important;
+}
+#about-us #elipse-3 img{
+    width: 38vw;
+    max-width: 576px!important;
+}
+#about-us #elipse-1{
+    z-index: 20;
+}
+#about-us #elipse-2{
+    z-index: 30;
+}
+#about-us #elipse-3{
+    z-index: 40;
+}
+#about-us p,pre,h2{
+    margin: 0;
+}
+#what-we-offer{
+    width: min-content;
+    margin: 0 auto;
+}
+#what-we-offer h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 70px;
+    margin-top: 37px;
+    text-align: center;
+    color: #272727;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#what-we-offer h6{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin:0px 0px 29px 0px;
+    color: #7B7581;
+}
+#what-we-offer #cards-1,#cards-2,#cards-3,#content{
+    display: grid;
+}
+#what-we-offer .card{
+    border: 1px solid #F4E7F3;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
+    border-radius: 3px;
+    width: 377px;
+    height: 484px;
+    padding: 63px 42px;
+    display: grid;
+    justify-items: center;
+    margin: 10px;
+}
+#what-we-offer .avatar{
+    width: 142px;
+    height: 142px;
+    background: #F4E7F3;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#what-we-offer #cards-1{
+    grid-column: 1;
+}
+#what-we-offer #cards-2{
+    grid-column: 2;
+}
+#what-we-offer #cards-3{
+    grid-column: 3;
+}
+#what-we-offer .card-1{
+    grid-row: 1;
+}
+#what-we-offer .card-2{
+    grid-row: 2;
+}
+#what-we-offer .card-3{
+    grid-row: 3;
+}
+#what-we-offer #card-8{
+    border: 1px solid #F4E7F3;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
+    border-radius: 3px;
+    width: 377px;
+    height: 615px;
+    padding: 63px 42px;
+    display: grid;
+    justify-items: center;
+    margin: 10px;
+}
+#what-we-offer #text-content{
+    grid-column: 2;
+}
+#benefits-to-you{
+    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
+    background-blend-mode: color, normal;
+}
+#benefits-to-you h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 70px;
+    margin-top: 37px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#benefits-to-you h6{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px 0px 29px 0px;
+    color: #7B7581; 
+}
+#benefits-to-you #text{
+    width: 376px;
+    height: 300px;
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    grid-row: 1;
+    grid-column: 2;
+    color: #FFFFFF;
+}
+#benefits-to-you #image{
+    grid-row: 1;
+    grid-column: 1;
+}
+#benefits-to-you #content{
+    display: grid;
+}
+#our-projects h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 70px;
+    margin-top: 37px;
+    text-align: center;
+    color: #272727;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#our-projects h6{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0px 0px 29px 0px;
+    text-transform: uppercase;
+    color: #7B7581;
+}
+#our-projects .card{
+    display: grid;
+    background: #FFFFFF;
+    border: 1px solid #F4E7F3;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    width: 278px;
+    height: 385px;
+}
+#our-projects .card .card-image{
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    height: 200px;
+}
+#our-projects .card .card-text{
+    background: #EAEAEA;
+    opacity: 0.5;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    font-family: Noto Sans SC;
+    height: 185px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #222222;
+    padding:0px 22px 0px 22px;
+
+}
+#our-projects .card .card-text h5{
+    font-size: 18px;
+    line-height: 26px;   
+    color: #333333;
+    margin:0;
+}
+#our-projects .cards{
+    display: grid;
+}
+#our-projects .group-1{
+    grid-row: 1;
+    margin: 10px;
+}
+#our-projects .group-2{
+    grid-row: 2;
+    margin: 10px;
+}
+#our-projects .card-p-1{
+    display: inline-block;
+    vertical-align: top;
+}
+#our-projects .card-p-2{
+    display: inline-block;
+    vertical-align: top;
+}
+#contact-us h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 70px;
+    margin-top: 37px;
+    text-align: center;
+    color: #272727;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#contact-us h6{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0px 0px 29px 0px;
+    text-transform: uppercase;
+    color: #7B7581;
+}
+#contact-us iframe{
+    width: 100%;
+    height: 631px;
+}
+#contact-us #block{
+    width: 476px;
+    height: 503px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 20;
+}
+#contact-us #text hr{
+    width: 371px;
+    height: 0px;
+    border: 1px solid #DCDCDC;
+}
+#contact-us #text{
+    padding: 37px 49px;    
+}
+#contact-us #back{
+    width: 100%;
+    height: 22px;
+    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
+    background-blend-mode: color, normal;
+    position: relative;
+    top: 15.6%;
+}
+#contact-us #content{
+    display: grid;
+}
+#contact-us #content #block{
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0% 10%;
+    align-self: center;
+    justify-self: end;
+}
+#contact-us #content #map{
+    grid-row: 1;
+    grid-column: 1;
+}
+footer{
+    display: grid;
+    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
+    background-blend-mode: color, normal;
+    padding: 5% 10%;
+}
+footer #qr-code{
+    width: 296px;
+    height: 296px;
+    border-radius: 50%;
+    background: rgba(0, 0,0,0.1);
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
+    align-items: center;
+}
+footer #our-contacts{
+    grid-column: 1;
+    grid-row: 1;
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #DEDEDE;
+    margin: 0;
+    display: grid;
+    align-items: center;
+}
+footer #our-contacts img{
+    width: 165px;
+    height: 41px;
+    margin-top:20px;
+}
+footer p{
+    margin: 0;
+}
+footer #our-contacts h6{
+    line-height: 31px;
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #DEDEDE;
+    margin: 0;
+}
+footer #our-contacts hr{
+    width: 30px;
+    height: 0px;
+    opacity: 0.5;
+    border: 2px solid #CCCCCC;
+    margin: 0;
+    align-self: center;
+}
+footer #info{
+    grid-column: 3;
+    grid-row: 1;
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: right;
+
+    color: #FFFFFF;
+}
+@media (min-width: 768px) and (max-width: 999px){
+    #what-we-offer .card{
+        margin: 0;
+    }
+    #nav,.Navbar__Link{
+        font-size: 12px;
+    }
+    #about-us #text{
+        font-size: 13px!important;
+        bottom: 39%;
+    }
+    #about-us #head-span{
+        margin: 0px;
+    }
+    #contact-us #content #block {
+        grid-row: 2;
+        width: 100vw;
+        margin: 0;
+    }
+    #our-projects #text{
+        justify-self: center;
+        display: grid;
+        grid-column: 1/3;
+    }
+    #our-projects .cards:nth-last-of-type(2){
+        grid-column: 2;
+    }
+    #our-projects .cards{
+        grid-row: 2;
+        justify-self: flex-end;
+    }
+    #our-projects  #card-1, #our-projects #card-5{
+        grid-row: 1;
+    }
+    #our-projects #card-2, #our-projects #card-6{
+        grid-row: 2;
+    }
+    #our-projects #card-3, #our-projects #card-7{
+        grid-row: 3;
+    }
+    #our-projects #card-4, #our-projects #card-8{
+        grid-row: 4;
+    }
+    #what-we-offer #cards-1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #what-we-offer #cards-3{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #what-we-offer #cards-2{
+        grid-column: 1/3;
+        grid-row: 4;
+    }
+    #what-we-offer #text-content{
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    #about-us #people{
+        left: 0px;
+    }
+    footer #info {
+        font-size: 14px;
+    }
+    #header #title h2{
+        margin: 50px 0px;
+    }
+}
+@media (max-width: 767px){
+    #nav-pages{
+        display: none!important;
+    }
+    #toggle{
+        display: grid!important;
+    }
+    #what-we-offer .card{
+        margin: 0;
+    }
+    footer #info,footer #our-contacts,footer #qr-code{
+        grid-column: 1;
+        justify-items: center;
+        justify-self: center;
+        text-align: center;
+    }
+    footer #info{
+        grid-row: 2;
+    }
+    footer #our-contacts{
+        grid-row: 3;
+    }
+    #our-projects .group-2, #our-projects .group-1{
+        grid-column: 1;
+        justify-self: center;
+    }
+    #our-projects #card-1{
+        grid-row: 1;
+    }
+    #our-projects #card-2{
+        grid-row: 2;
+    }
+    #our-projects #card-3{
+        grid-row: 3;
+    }
+    #our-projects #card-4{
+        grid-row: 4;
+    }
+    #our-projects #card-5{
+        grid-row: 5;
+    }
+    #our-projects #card-6{
+        grid-row: 6;
+    }
+    #our-projects #card-7{
+        grid-row: 7;
+    }
+    #our-projects #card-8{
+        grid-row: 8;
+    }
+    #about-us #text{
+        font-size: 10.5px;
+        bottom: 30%;
+        width: 90%;
+    }
+    #about-us #head-span{
+        margin: 0px;
+    }
+    #about-us #people{
+        left: 0px;
+    }
+    #header #title h1 {
+        font-size: 7vh;
+    }
+    #header #title h2 {
+        font-size: 2.5vh;
+    }
+    #header #logos {
+        display: grid;
+    }
+    #header #logos .logo{
+        margin: 10px 0px;
+    }
+    #benefits-to-you #text{
+        font-size: 17px;
+        width: 90%;
+    }
+    #benefits-to-you #image{
+        width: 82%!important;
+    }
+    #contact-us iframe{
+        width: 100vw;
+        height: 631px;
+    }
+    #contact-us #content #block {
+        grid-row: 2;
+        width: 100vw;
+        margin: 0;
+    }
+    #contact-us #text{
+        padding: 37px 37px;    
+    }
+    #what-we-offer #cards-1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #what-we-offer #cards-2{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #what-we-offer #cards-3{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #what-we-offer #text-content{
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+@media (min-width:769px) and (max-width: 1025px){
+    #our-projects #text{
+        justify-self: center;
+        display: grid;
+        grid-column: 1/3;
+    }
+    #our-projects .cards{
+        justify-self: flex-end;
+    }
+    #our-projects  #card-1, #our-projects #card-2,#our-projects #card-3{
+        grid-row: 1;
+    }
+    #our-projects #card-4, #our-projects #card-5, #our-projects #card-6{
+        grid-row: 2;
+    }
+    #our-projects #card-7, #our-projects #card-8{
+        grid-row: 3;
+    }
+    #our-projects  #card-1, #our-projects #card-4,#our-projects #card-7{
+        grid-column: 1;
+    }
+    #our-projects #card-2, #our-projects #card-5, #our-projects #card-8{
+        grid-column: 2;
+    }
+    #our-projects #card-3, #our-projects #card-6{
+        grid-column: 3;
+    }
+    #about-us #text{
+        font-size: 14.5px;
+        bottom: 48%
+    }
+    #about-us #head-span{
+        margin:0px 64px;
+    }
+    #what-we-offer #cards-1{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #what-we-offer #cards-3{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    #what-we-offer #cards-2{
+        grid-column: 1/3;
+        grid-row: 4;
+    }
+    #what-we-offer #text-content{
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    #header #title h2{
+        margin: 50px 0px;
+    }
+}
+@media (max-width: 1025px){
+    #benefits-to-you #image{
+        grid-row: 2;
+        grid-column: 1;
+        position: relative;
+        background: url(./assets/img/Asset\ 1\ 2\ 1.png);
+        background-size: cover;
+        width: -webkit-fill-available;
+        height: 500px;
+        background-position-x: 15%;
+        background-position-y: 50px;
+        transform: rotate(-17.94deg);
+    }
+    #benefits-to-you #image img{
+        display: none;
+    }
+    #benefits-to-you #text{
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: center;
+    }
+}
+@media (max-width:400px){
+    #contact-us #text {
+        padding: 37px 3px;
+    }
+    #what-we-offer #card-8{
+        margin: 0;
+    }
+}
