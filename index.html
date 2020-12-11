@@ -337,8 +337,10 @@
         <script>
         var map = new BMap.Map("map");  
         var point = new BMap.Point(121.465469,30.948351);
+        var marker = new BMap.Marker(new BMap.Point(121.465669,30.948651));
         map.centerAndZoom(point, 19);
         map.enableScrollWheelZoom(true);
+        map.addOverlay(marker);
         </script>
 </body>
 </html>
