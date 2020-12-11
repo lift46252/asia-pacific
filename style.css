@@ -58,7 +58,6 @@
 body{
     margin: 0;
     padding: 0;
-    background: #E5E5E5;
 }
 #header,#about-us,#what-we-offer,#benefits-to-you,#our-projects{
     display: grid;
@@ -76,6 +75,9 @@ body{
     display: grid;
     justify-items: center;
     align-items: center;
+}
+#nav h5{
+    margin:0;
 }
 #toggle{
     justify-self: flex-end;
@@ -112,8 +114,11 @@ body{
 }
 #header{
     background-image: url(./assets/img/Rectangle\ 1.png);
+    padding:67px 0px 0px 0px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
     height: 931px;
 }
 #header #title h1{
@@ -121,7 +126,6 @@ body{
     font-style: normal;
     font-weight: 900;
     font-size: 10vh;
-    line-height: 139px;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 6px 0px 0px rgba(255, 33, 33, 0.25), -8px 0px 0px rgba(27, 100, 209, 0.26);
     color: #FFFFFF;
@@ -132,7 +136,6 @@ body{
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
-    line-height: 52px;
     text-align: center;
     color: #F0EFEF;
     margin: 0;
@@ -191,7 +194,7 @@ body{
     line-height: 30px;
     text-align: center;
     text-transform: uppercase;
-    margin:0px 0px 110px 0px;
+    margin:0;
     color: #7B7581;
 }
 #about-us #text{
@@ -204,12 +207,14 @@ body{
     line-height: 30px;
     text-align: justify;  
     color: #000000;
-    margin-top: 20px;
     z-index: 100;
     grid-row: 1/1;
     grid-column: 1/1;
     position: relative;
     bottom: 57%;
+}
+#about-us p:first-child{
+    padding-top: 16px;
 }
 #about-us #people{
     z-index: 200;
@@ -256,7 +261,7 @@ grid-column: 1/1;
 #about-us #elipse-3{
     z-index: 40;
 }
-#about-us p,pre,h2{
+#about-us p,#about-us pre,#about-us h2{
     margin: 0;
 }
 #what-we-offer{
@@ -282,7 +287,7 @@ grid-column: 1/1;
     line-height: 30px;
     text-align: center;
     text-transform: uppercase;
-    margin:0px 0px 29px 0px;
+    margin: 0;
     color: #7B7581;
 }
 #what-we-offer #cards-1,#cards-2,#cards-3,#content{
@@ -294,11 +299,34 @@ grid-column: 1/1;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
     border-radius: 3px;
     width: 377px;
-    height: 484px;
+    max-height: 484px;
     padding: 63px 42px;
     display: grid;
     justify-items: center;
     margin: 10px;
+    background: white;
+}
+#what-we-offer .card h4{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #555555;
+}
+#what-we-offer .card p{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    color: #555555;
+
 }
 #what-we-offer .avatar{
     width: 142px;
@@ -314,6 +342,7 @@ grid-column: 1/1;
 }
 #what-we-offer #cards-2{
     grid-column: 2;
+    margin-top: 25px;
 }
 #what-we-offer #cards-3{
     grid-column: 3;
@@ -333,11 +362,12 @@ grid-column: 1/1;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
     border-radius: 3px;
     width: 377px;
-    height: 615px;
+    max-height: 615px;
     padding: 63px 42px;
     display: grid;
+    background: white;
     justify-items: center;
-    margin: 10px;
+    margin: 10px 10px 75px 10px;
 }
 #what-we-offer #text-content{
     grid-column: 2;
@@ -426,19 +456,19 @@ grid-column: 1/1;
     height: 200px;
 }
 #our-projects .card .card-text{
-    background: #EAEAEA;
-    opacity: 0.5;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+    background: rgba(234,234,234,0.5);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.08);
     border-radius: 3px;
     font-family: Noto Sans SC;
     height: 185px;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 10px;
     text-transform: uppercase;
     color: #222222;
-    padding:0px 22px 0px 22px;
+    height: 160px;
+    padding:21px 10px 0px 22px;
 
 }
 #our-projects .card .card-text h5{
@@ -466,7 +496,7 @@ grid-column: 1/1;
     display: inline-block;
     vertical-align: top;
 }
-#contact-us h2{
+#contact-us h2:first-child{
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: bold;
@@ -500,7 +530,7 @@ grid-column: 1/1;
     z-index: 20;
 }
 #contact-us #text hr{
-    width: 371px;
+    width: 100%;
     height: 0px;
     border: 1px solid #DCDCDC;
 }
@@ -513,7 +543,8 @@ grid-column: 1/1;
     background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
     background-blend-mode: color, normal;
     position: relative;
-    top: 15.6%;
+    display: grid;
+    align-self: flex-end;
 }
 #contact-us #content{
     display: grid;
@@ -524,6 +555,49 @@ grid-column: 1/1;
     margin: 0% 10%;
     align-self: center;
     justify-self: end;
+    display: grid;
+}
+#contact-us #content #block h2{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    color: #555555;
+}
+#contact-us #content #block h1{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 35px;
+    text-transform: uppercase;
+    
+    color: #333333;
+}
+#contact-us #content #block h3{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #333333;
+    text-transform: uppercase;
+}
+#contact-us #content #block h4{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height */
+    
+    
+    color: #333333;
+    
 }
 #contact-us #content #map{
     grid-row: 1;
@@ -558,33 +632,44 @@ footer #our-contacts{
     line-height: 26px;
     color: #DEDEDE;
     margin: 0;
-    display: grid;
-    align-items: center;
+
 }
 footer #our-contacts img{
     width: 165px;
     height: 41px;
-    margin-top:20px;
+    margin-top:37px;
 }
 footer p{
     margin: 0;
 }
-footer #our-contacts h6{
+footer #our-contacts h5{
     line-height: 31px;
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    line-height: 26px;
     color: #DEDEDE;
     margin: 0;
+}
+footer #our-contacts h6{
+    margin:0px 0px 11px 0px;
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #DEDEDE;
+}
+footer #our-contacts p{
+    margin: 4.5px 0px;
 }
 footer #our-contacts hr{
     width: 30px;
     height: 0px;
     opacity: 0.5;
     border: 2px solid #CCCCCC;
-    margin: 0;
+    margin: 22px 0px;
     align-self: center;
 }
 footer #info{
@@ -600,8 +685,18 @@ footer #info{
     color: #FFFFFF;
 }
 @media (min-width: 768px) and (max-width: 999px){
+    #header #title h1 {
+        font-size: 10vw;
+    }
+    #header #title h2 {
+        font-size: 4.5vw;
+    }
     #what-we-offer .card{
-        margin: 0;
+        margin: 10px 0px 10px 5px;
+        height: 484px;
+    }
+    #what-we-offer #card-8{
+        height: 615px;
     }
     #nav,.Navbar__Link{
         font-size: 12px;
@@ -661,14 +756,57 @@ footer #info{
     #about-us #people{
         left: 0px;
     }
+    #about-us #text{
+        margin: 87px 0px 20px 0px;
+    }
+    #about-us h6 {
+        margin: 0% 0% 13% 0% !important;
+    }
     footer #info {
-        font-size: 14px;
+        font-size: 11px;
     }
     #header #title h2{
         margin: 50px 0px;
     }
+    #contact-us #content #block {
+        grid-row: 2/4;
+        width: 90vw;
+        margin: 0;
+        align-self: center;
+        justify-self: center;
+    }
+    #contact-us #content #map{
+        grid-row: 1/3;
+    }
 }
 @media (max-width: 767px){
+    #about-us {
+        overflow: hidden;
+    }
+    #about-us #elipse-1 img{
+        width: auto;
+        max-width: 617px!important;
+    }
+    #about-us #elipse-2 img{
+        width: auto;
+        max-width: 464px!important;
+    }
+    #about-us #elipse-3 img{
+        width: auto;
+        max-width: 333px!important;
+    }
+    #about-us #elipse-1{
+        z-index: 20;
+        overflow: hidden;
+    }
+    #about-us #elipse-2{
+        z-index: 30;
+        overflow: hidden;
+    }
+    #about-us #elipse-3{
+        z-index: 40;
+        overflow: hidden;
+    }
     #nav-pages{
         display: none!important;
     }
@@ -676,7 +814,12 @@ footer #info{
         display: grid!important;
     }
     #what-we-offer .card{
-        margin: 0;
+        margin: 0px 0px 20px 0px;
+        width: 95vw;
+    }
+    #what-we-offer #card-8{
+        margin: 0px 0px 20px 0px;
+        width: 95vw;
     }
     footer #info,footer #our-contacts,footer #qr-code{
         grid-column: 1;
@@ -685,14 +828,28 @@ footer #info{
         text-align: center;
     }
     footer #info{
-        grid-row: 2;
+        grid-row: 3;
     }
     footer #our-contacts{
-        grid-row: 3;
+        grid-row: 1;
+        display: grid;
+    }
+    footer #our-contacts hr{
+        justify-self: center;
+    }
+    footer #qr-code{
+        grid-row: 2;
+        margin: 46px 0px 46px 0px;
     }
     #our-projects .group-2, #our-projects .group-1{
         grid-column: 1;
         justify-self: center;
+    }
+    #our-projects .card{
+        width: 90vw;
+    }
+    #our-projects .card br:not(.br-special){
+        display: none;
     }
     #our-projects #card-1{
         grid-row: 1;
@@ -730,16 +887,16 @@ footer #info{
         left: 0px;
     }
     #header #title h1 {
-        font-size: 7vh;
+        font-size: 10vw;
     }
     #header #title h2 {
-        font-size: 2.5vh;
+        font-size: 4.5vw;
     }
-    #header #logos {
-        display: grid;
+    #header #logos  .logo img{
+        width: 100px;
     }
     #header #logos .logo{
-        margin: 10px 0px;
+        margin: 0px 13px 10px 13px;
     }
     #benefits-to-you #text{
         font-size: 17px;
@@ -753,20 +910,27 @@ footer #info{
         height: 631px;
     }
     #contact-us #content #block {
-        grid-row: 2;
-        width: 100vw;
+        grid-row: 2/4;
+        width: 90vw;
         margin: 0;
+        align-self: center;
+        justify-self: center;
     }
-    #contact-us #text{
-        padding: 37px 37px;    
+    #contact-us #content #map{
+        grid-row: 1/3;
+    }
+    #contact-us #text {
+        padding: 25px 22px;
     }
     #what-we-offer #cards-1{
         grid-column: 1;
         grid-row: 2;
+        margin-top: 20px;
     }
     #what-we-offer #cards-2{
         grid-column: 1;
         grid-row: 3;
+        margin: 0;
     }
     #what-we-offer #cards-3{
         grid-column: 1;
@@ -827,8 +991,11 @@ footer #info{
         grid-column: 1/3;
         grid-row: 1;
     }
-    #header #title h2{
-        margin: 50px 0px;
+    #header #title h1 {
+        font-size: 8vw;
+    }
+    #header #title h2 {
+        font-size: 3.5vw;
     }
 }
 @media (max-width: 1025px){
@@ -852,12 +1019,22 @@ footer #info{
         grid-column: 1;
         justify-self: center;
     }
-}
-@media (max-width:400px){
-    #contact-us #text {
-        padding: 37px 3px;
+    #about-us #text{
+        margin: 87px 0px 20px 0px;
     }
-    #what-we-offer #card-8{
-        margin: 0;
+    #about-us h6 {
+        margin: 0vh 0vh 6.5vh 0vh;
+    }
+    #header{
+        height: auto !important;
+    }
+    #header #logos{
+        margin-bottom: 8%;
+    }
+    #header{
+        background-position-x: 25%;
+    }
+    #header #title{
+        padding-top: 30%;
     }
 }

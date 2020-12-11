@@ -190,7 +190,7 @@
                     <div class="card-image"><img src="./assets/img/image 27.png" alt=""></div>
                     <div class="card-text">
                         <h5>上海杉沃国际贸易有限公司</h5>
-                        <p>网址：nonwoven-machinery.com </p>
+                        <p>网址：nonwoven-<br><br>machinery.com </p>
                         <p>核心服务：yandex推广</p>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
                     <div class="card-image"><img src="./assets/img/image 30.png" alt=""></div>
                     <div class="card-text">
                         <h5>无锡市光彩机械制造有限公司</h5>
-                        <p>Wuxi Guangcai Machinery Manufacturing Co., Ltd. </p>
+                        <p>Wuxi Guangcai Machinery<br class="br-special"><br class="br-special">Manufacturing Co., Ltd. </p>
                         <p>网址：www.gcformmachine.ru</p>
                         <p>核心服务：yandex推广</p>
                     </div>
@@ -250,7 +250,7 @@
                 <div id="block">
                     <div id="text">
                         <h1>ASP 洋速平</h1>
-                        <h3>上海市奉贤区奉浦工业区奉浦大道111号7楼2285室</h3>
+                        <h2>上海市奉贤区奉浦工业区奉浦大道111号7楼2285室</h2>
                         <hr>
                         <h3>邮箱</h3>
                         <h4>info@as-pacific.com</h4>
@@ -261,18 +261,21 @@
                     <div id="back"></div>
                 </div>
                 <div id="map">
-                    <iframe src="https://j.map.baidu.com/dc/OXX" frameborder></iframe>                  
+<!--                     <iframe src="https://j.map.baidu.com/dc/OXX" frameborder></iframe>   -->                
                 </div>
             </div>
 
         </section>
+  
+    </head>  
+    <body>
     </main>
     <footer>
         <div id="our-contacts">
-            <h6>备案号：<br>
-                沪ICP备18040658号</h6>
+            <h5>备案号：<br>
+                沪ICP备18040658号</h5>
             <hr>
-            <p>联系方式：</p>
+            <h6>联系方式：</h6>
             <p>+86 13764084473</p>
             <p>info@as-pacific.com</p>
             <p>https://as-pacific.com</p>
@@ -330,5 +333,12 @@
             }
         }
     </script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=E4805d16520de693a3fe707cdc962045"></script>
+        <script>
+        var map = new BMap.Map("map");  
+        var point = new BMap.Point(121.465469,30.948351);
+        map.centerAndZoom(point, 19);
+        map.enableScrollWheelZoom(true);
+        </script>
 </body>
 </html>
