@@ -211,7 +211,7 @@ body{
     grid-row: 1/1;
     grid-column: 1/1;
     position: relative;
-    bottom: 57%;
+    bottom: 60%;
 }
 #about-us p:first-child{
     padding-top: 16px;
@@ -231,6 +231,9 @@ body{
     display: grid;
     justify-items: center;
     align-items: flex-end;
+    position: relative;
+    bottom: -4px;
+    margin-top: 100px;
 }
 #about-us #elipse-1,#elipse-2,#elipse-3,#people{
 grid-row: 1/1;
@@ -238,19 +241,19 @@ grid-column: 1/1;
 }
 #about-us #people img{
     width: 94vw;
-    max-width: 1440px!important;
+    max-width: 1139px!important;
 }
 #about-us #elipse-1 img{
-    width: 74vw;
-    max-width: 1152px!important;
-}
-#about-us #elipse-2 img{
-    width: 56vw;
+    width: 45vw;
     max-width: 864px!important;
 }
+#about-us #elipse-2 img{
+    width: 35vw;
+    max-width: 672px!important;
+}
 #about-us #elipse-3 img{
-    width: 38vw;
-    max-width: 576px!important;
+    width: 25vw;
+    max-width: 480px!important;
 }
 #about-us #elipse-1{
     z-index: 20;
@@ -261,7 +264,7 @@ grid-column: 1/1;
 #about-us #elipse-3{
     z-index: 40;
 }
-#about-us p,#about-us pre,#about-us h2{
+#about-us p,#about-us pre{
     margin: 0;
 }
 #what-we-offer{
@@ -314,7 +317,7 @@ grid-column: 1/1;
     line-height: 30px;
     text-align: center;
     text-transform: uppercase;
-    
+    margin: 48px 0px 0px 0px;
     color: #555555;
 }
 #what-we-offer .card p{
@@ -602,12 +605,13 @@ grid-column: 1/1;
 #contact-us #content #map{
     grid-row: 1;
     grid-column: 1;
+    height: 631px;
 }
 footer{
     display: grid;
     background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
     background-blend-mode: color, normal;
-    padding: 5% 10%;
+    padding: 2% 10%;
 }
 footer #qr-code{
     width: 296px;
@@ -621,6 +625,16 @@ footer #qr-code{
     align-self: center;
     justify-items: center;
     align-items: center;
+}
+footer #qr-code div p{
+    font-family: Noto Sans SC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #FFFFFF;
 }
 footer #our-contacts{
     grid-column: 1;
@@ -683,6 +697,9 @@ footer #info{
     text-align: right;
 
     color: #FFFFFF;
+}
+h2{
+    margin: 39px 0px 0px 0px;
 }
 @media (min-width: 768px) and (max-width: 999px){
     #header #title h1 {
@@ -778,10 +795,16 @@ footer #info{
     #contact-us #content #map{
         grid-row: 1/3;
     }
+    #about-us #people img{
+        max-width: 459px!important;
+    }
 }
 @media (max-width: 767px){
     #about-us {
         overflow: hidden;
+    }
+    #about-us #people img{
+        max-width: 459px!important;
     }
     #about-us #elipse-1 img{
         width: auto;
@@ -996,6 +1019,21 @@ footer #info{
     }
     #header #title h2 {
         font-size: 3.5vw;
+    }
+    #about-us #people img{
+        max-width: 799px!important;
+    }
+    #about-us #elipse-1 img{
+        width: auto;
+        max-width: 617px!important;
+    }
+    #about-us #elipse-2 img{
+        width: auto;
+        max-width: 464px!important;
+    }
+    #about-us #elipse-3 img{
+        width: auto;
+        max-width: 333px!important;
     }
 }
 @media (max-width: 1025px){
