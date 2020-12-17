@@ -726,10 +726,6 @@ h2{
     margin: 39px 0px 0px 0px;
 }
 @media (min-width: 768px) and (max-width: 999px){
-    a {
-        text-decoration: none!important; 
-        color: white!important;   
-    }
     #benefits-to-you #image{
         grid-row: 1;
         grid-column: 1;
