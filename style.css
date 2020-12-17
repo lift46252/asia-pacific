@@ -935,9 +935,6 @@ h2{
     #benefits-to-you #text{
         width: 90%;
     }
-    #benefits-to-you #image{
-        width: 82%!important;
-    }
     #contact-us iframe{
         width: 100vw;
         height: 631px;
@@ -976,7 +973,7 @@ h2{
     #about-us h6 {
         margin: 0vh 0vh 0vh 0vh;
     }
-    h2:not(#special-h2){
+    h2:not(.special-h2){
         font-size: 36px!important;
     }
 }
@@ -1060,13 +1057,11 @@ h2{
         grid-row: 2;
         grid-column: 1;
         position: relative;
-        background: url(./assets/img/Asset\ 1\ 2\ 1.png);
+        background: url(./assets/img/assets-mobile-version.png);
         background-size: cover;
         width: -webkit-fill-available;
         height: 500px;
-        background-position-x: 15%;
-        background-position-y: 50px;
-        transform: rotate(-17.94deg);
+        background-position-y: -100px;
     }
     #benefits-to-you #image img{
         display: none;
