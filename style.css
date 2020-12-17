@@ -3,7 +3,14 @@
     src: url(./assets/fonts/Nato-sans-sc/NotoSansSC-Regular.otf);
    }
 @font-face {
-    font-family: Noto Sans SC Bold;
+    font-family: Noto Sans SC;
+    font-weight: bold;
+    font-weight: 900;
+    src: url(./assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
+}
+@font-face {
+    font-family: Noto Sans SC;
+    font-weight: 900;
     src: url(./assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
 }
 /* Боковое навигационное меню */
