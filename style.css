@@ -599,14 +599,14 @@ grid-column: 1/1;
     color: #333333;
     text-transform: uppercase;
 }
-#contact-us #content #block h4{
+#contact-us #content #block a{
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
     /* identical to box height */
-    
+    text-decoration: none;
     
     color: #333333;
     
@@ -687,8 +687,9 @@ footer #our-contacts h6{
 
     color: #DEDEDE;
 }
-footer #our-contacts p{
+footer #our-contacts p, footer #our-contacts a{
     margin: 4.5px 0px;
+    text-decoration: none;
 }
 footer #our-contacts hr{
     width: 30px;
