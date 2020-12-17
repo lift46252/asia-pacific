@@ -215,7 +215,7 @@ body{
     grid-row: 1/1;
     grid-column: 1/1;
     position: relative;
-    bottom: 60%;
+    bottom: 441px;
 }
 #about-us p:first-child{
     padding-top: 16px;
@@ -231,13 +231,17 @@ body{
 #about-us p,#head-span{
     display: inline-block;
 }
+#about-us-header{
+    grid-row: 1;
+}
 #about-us #images{
     display: grid;
+    grid-row: 2;
     justify-items: center;
     align-items: flex-end;
     position: relative;
     bottom: -4px;
-    margin-top: 100px;
+    height: 825px;
 }
 #about-us #elipse-1,#elipse-2,#elipse-3,#people{
 grid-row: 1/1;
@@ -1073,6 +1077,10 @@ h2{
     }
     #about-us #text{
         margin: 87px 0px 20px 0px;
+    }
+    #about-us #images{
+        margin-top: 100px;
+        height: auto;
     }
     #header{
         height: auto !important;
