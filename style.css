@@ -599,7 +599,7 @@ grid-column: 1/1;
     color: #333333;
     text-transform: uppercase;
 }
-#contact-us #content #block h4{
+#contact-us #content #block a{
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: bold;
