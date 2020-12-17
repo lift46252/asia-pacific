@@ -105,6 +105,7 @@ body{
     line-height: 26px;
     color: #FFFFFF;
     justify-self: flex-start;
+    text-decoration: none;
 }
 #nav-pages{
     justify-self: flex-end;
