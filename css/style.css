@@ -254,7 +254,6 @@ body{
     position: relative;
     bottom: -4px;
     height: 825px;
-    overflow: hidden;
 }
 #about-us #elipse-1,#elipse-2,#elipse-3,#people{
 grid-row: 1/1;
@@ -607,21 +606,19 @@ grid-column: 1/1;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
-    /* identical to box height */
+    margin: 0;
     color: #333333;
     text-transform: uppercase;
 }
-#contact-us #content #block a{
+#contact-us #content #block a ,#contact-us #content #block h4{
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
-    /* identical to box height */
+    margin-top: 4px;
     text-decoration: none!important;
-    
     color: #333333;
-    
 }
 #contact-us #content #map{
     grid-row: 1;
@@ -909,6 +906,14 @@ h2{
     }
     #our-projects .card{
         width: 90vw;
+        height: auto;
+    }
+    #our-projects .card .card-text{
+        height: auto;
+        padding: 14px 17px!important;
+    }
+    #our-projects .card .card-image{
+        height: 123px;
     }
     #our-projects .card br:not(.br-special){
         display: none;
@@ -984,6 +989,9 @@ h2{
     }
     #contact-us #text {
         padding: 25px 22px;
+    }
+    #what-we-offer .card,#what-we-offer #card-8{
+        padding: 26px 41px;
     }
     #what-we-offer #cards-1{
         grid-column: 1;
