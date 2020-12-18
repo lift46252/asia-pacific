@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -63,9 +64,9 @@
                         <p>的服务。您打算开发国外</p><span id="head-span"></span><p>市场吗？请从ASP开始！</p>                    
                     </div>
                     <div id="people"><img src="./assets/img/Background copy 1.png" alt=""></div>
-                    <div id="elipse-1"><img src="./assets/img/Ellipse 1.svg" alt=""></div>
-                    <div id="elipse-2"><img src="./assets/img/Ellipse 2.svg" alt=""></div>
-                    <div id="elipse-3"><img src="./assets/img/Ellipse 3.svg" alt=""></div>                   
+                    <div id="elipse-1" class="wow slideInUp"><img src="./assets/img/Ellipse 1.svg" alt=""></div>
+                    <div id="elipse-2" class="wow slideInUp"><img src="./assets/img/Ellipse 2.svg" alt=""></div>
+                    <div id="elipse-3" class="wow slideInUp"><img src="./assets/img/Ellipse 3.svg" alt=""></div>                   
                 </div>
         </section>
         <section id="what-we-offer">
@@ -349,6 +350,10 @@
         var marker = new BMap.Marker(new BMap.Point(121.465669,30.948651));
         map.centerAndZoom(point, 19);
         map.addOverlay(marker);
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
     </script>
 </body>
 </html>
