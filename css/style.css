@@ -981,6 +981,7 @@ h2{
         grid-row: 2/4;
         width: 90vw;
         margin: 0;
+        height: auto;
         align-self: center;
         justify-self: center;
     }
