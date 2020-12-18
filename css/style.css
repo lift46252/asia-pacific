@@ -190,6 +190,7 @@ body{
 #about-us{
     background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.16) 4.85%, rgba(43, 102, 255, 0.1425) 98.69%), #EEEAF1;
     background-blend-mode: color, normal;
+    overflow: hidden;
 }
 #about-us h2{
     font-family: Noto Sans SC;
@@ -260,19 +261,16 @@ grid-row: 1/1;
 grid-column: 1/1;
 }
 #about-us #people img{
-    width: 94vw;
+    width: 100vw;
     max-width: 1139px!important;
 }
 #about-us #elipse-1 img{
-    width: 45vw;
     max-width: 864px!important;
 }
 #about-us #elipse-2 img{
-    width: 35vw;
     max-width: 672px!important;
 }
 #about-us #elipse-3 img{
-    width: 25vw;
     max-width: 480px!important;
 }
 #about-us #elipse-1{
@@ -732,7 +730,8 @@ h2{
         background-size: cover;
         width: 300px;
         height: 400px;
-        background-position-y: -85px;
+        background-position-y: -40px;
+        background-position-x: -35px;
         margin-right: 50px;
     }
     #benefits-to-you #text{
@@ -756,7 +755,10 @@ h2{
         font-size: 12px;
     }
     #about-us #text{
-        bottom: 39%;
+        bottom: 58%;
+    }
+    #about-us #about-us-header{
+        margin-bottom: 80px;
     }
     #about-us #head-span{
         margin: 0px;
@@ -832,7 +834,19 @@ h2{
         grid-row: 1/3;
     }
     #about-us #people img{
-        max-width: 459px!important;
+        max-width: 799px!important;
+    }
+    #about-us #elipse-1 img{
+        width: auto;
+        max-width: 617px!important;
+    }
+    #about-us #elipse-2 img{
+        width: auto;
+        max-width: 464px!important;
+    }
+    #about-us #elipse-3 img{
+        width: auto;
+        max-width: 333px!important;
     }
 }
 @media (max-width: 767px){
@@ -879,6 +893,9 @@ h2{
     #what-we-offer #card-8{
         margin: 0px 0px 20px 0px;
         width: 95vw;
+    }
+    footer{
+        padding: 6% 10%;
     }
     footer #info,footer #our-contacts,footer #qr-code{
         grid-column: 1;
@@ -942,11 +959,19 @@ h2{
     #our-projects #card-8{
         grid-row: 8;
     }
+    #our-projects h2{
+        margin-top: 42px;
+    }
+    #our-projects h6{
+        font-size: 18px;
+        margin-bottom: 11px;
+    }
     #about-us #text{
         font-size: 16px;
         height: auto;
-        bottom: 30%;
-        width: 90%;
+        bottom: 31%;
+        width: 94%;
+        line-height: 26px;
     }
     #about-us #head-span{
         margin: 0px;
@@ -954,45 +979,62 @@ h2{
     #about-us #people{
         left: 0px;
     }
+
     #header #title h1 {
         font-size: 56px;
+        margin-top: 27px;
     }
     #header #title h2 {
         font-size: 20px;
-        margin: 39px 0px 0px 0px;
+        margin: 15px 0px 0px 0px;
     }
     #header #subtitle{
-        margin: 44px 0px;
+        margin: 44px 0px 0px 0px;
+    }
+    #header #subtitle h4{
+        font-size: 20px;
+    }
+    #header #logos{
+        margin: 0% 5% 5% 5%!important;
     }
     #header #logos  .logo img{
-        width: 100px;
+        width: 104%;
     }
     #header #logos .logo{
-        margin: 0px 10px 10px 10px;
+        margin: 7px 10px;
     }
     #benefits-to-you #text{
-        width: 90%;
+        width: 78%;
     }
     #contact-us iframe{
         width: 100vw;
         height: 631px;
     }
     #contact-us #content #block {
-        grid-row: 2/4;
+        grid-row: 2/5;
         width: 90vw;
         margin: 0;
-        height: auto;
+        height: 413px;
         align-self: center;
         justify-self: center;
     }
+    #contact-us #content #block #text hr{
+        margin: 20px 0px;
+    }
+    #contact-us #content #block #text h1{
+        margin: 0;
+    }
     #contact-us #content #map{
         grid-row: 1/3;
+    }
+    #contact-us #content{
+        margin-bottom: 37px;
     }
     #contact-us #text {
         padding: 25px 22px;
     }
     #what-we-offer .card,#what-we-offer #card-8{
-        padding: 26px 41px;
+        padding: 26px 43px;
     }
     #what-we-offer #cards-1{
         grid-column: 1;
@@ -1012,8 +1054,30 @@ h2{
         grid-column: 1;
         grid-row: 1;
     }
+    #what-we-offer #text-content h2{
+        margin-top: 18px;
+    }
+    #what-we-offer #text-content h6{
+        font-size: 18px;
+    }
+    #what-we-offer .avatar{
+        width: 93px;
+        height: 93px;
+    }
+    #what-we-offer .avatar img{
+        width: 40%;
+        height: auto;
+    }
+    #what-we-offer .card h4, #what-we-offer #card-8 h4{
+        margin: 25px 0 0 0 ;
+    }
+    #about-us h2{
+        margin-top: 8px;
+    }
     #about-us h6 {
-        margin: 0vh 0vh 0vh 0vh;
+        margin: 0;
+        font-size: 18px;
+        line-height: 26px;
     }
     h2:not(.special-h2){
         font-size: 36px!important;
@@ -1023,10 +1087,14 @@ h2{
         grid-column: 1;
         position: relative;
         background: url(../assets/img/assets-mobile-version.png);
-        background-size: cover;
+        background-size: 211%;
         width: -webkit-fill-available;
+        background-position-x: -100px;
         height: 500px;
-        background-position-y: -85px;
+    }
+    #benefits-to-you h6{
+        font-size: 18px;
+        margin-bottom: 11px;
     }
 }
 @media (min-width:769px) and (max-width: 1025px){
@@ -1111,7 +1179,8 @@ h2{
         background-size: cover;
         width: 300px;
         height: 400px;
-        background-position-y: -85px;
+        background-position-y: -40px;
+        background-position-x: -35px;
         margin-right: 100px;
     }
     #benefits-to-you #text{
