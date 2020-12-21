@@ -73,6 +73,7 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: Noto Sans SC;
 }
 #header,#about-us,#what-we-offer,#benefits-to-you,#our-projects{
     display: grid;
@@ -982,7 +983,9 @@ h2{
 
     #header #title h1 {
         font-size: 56px;
-        margin-top: 27px;
+    }
+    #header #title h1:nth-child(1){
+        margin-top: 27px;        
     }
     #header #title h2 {
         font-size: 20px;
