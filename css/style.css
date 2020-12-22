@@ -139,12 +139,21 @@ body{
     background-position-y: center;
     height: 931px;
 }
+#header #title{
+    display: grid;
+}
+#header #title #h1-align{
+    justify-self: center;
+    margin: 0;
+    width: fit-content;
+    display: grid;
+}
 #header #title h1{
     font-family: Noto Sans SC;
     font-style: normal;
     font-weight: 900;
     font-size: 96px;
-    text-align: center;
+    text-align: left;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 6px 0px 0px rgba(255, 33, 33, 0.25), -8px 0px 0px rgba(27, 100, 209, 0.26);
     color: #FFFFFF;
     margin: 0;
@@ -229,7 +238,7 @@ body{
     grid-row: 1/1;
     grid-column: 1/1;
     position: relative;
-    bottom: 441px;
+    bottom: 480px;
 }
 #about-us p:first-child{
     padding-top: 16px;
@@ -666,7 +675,7 @@ footer #our-contacts{
     line-height: 26px;
     color: #DEDEDE;
     margin: 0;
-
+    align-self: center;
 }
 footer #our-contacts img{
     width: 165px;
@@ -756,10 +765,10 @@ h2{
         font-size: 12px;
     }
     #about-us #text{
-        bottom: 58%;
+        bottom: 64%;
     }
     #about-us #about-us-header{
-        margin-bottom: 80px;
+        margin-bottom: 120px;
     }
     #about-us #head-span{
         margin: 0px;
@@ -970,7 +979,7 @@ h2{
     #about-us #text{
         font-size: 16px;
         height: auto;
-        bottom: 31%;
+        bottom: 34%;
         width: 94%;
         line-height: 26px;
     }
@@ -982,7 +991,7 @@ h2{
     }
 
     #header #title h1 {
-        font-size: 56px;
+        font-size: 48px;
     }
     #header #title h1:nth-child(1){
         margin-top: 27px;        
@@ -1129,7 +1138,7 @@ h2{
     }
     #about-us #text{
         font-size: 18px;
-        bottom: 61%
+        bottom: 67%
     }
     #about-us #head-span{
         margin:0px 0px;
@@ -1157,7 +1166,7 @@ h2{
         font-size: 36px;
     }
     #about-us h6 {
-        margin: 0px 0px 100px 0px;
+        margin: 0px 0px 130px 0px;
     }
     #about-us #people img{
         max-width: 799px!important;
