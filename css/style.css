@@ -238,7 +238,7 @@ body{
     grid-row: 1/1;
     grid-column: 1/1;
     position: relative;
-    bottom: 480px;
+    bottom: 500px;
 }
 #about-us p:first-child{
     padding-top: 16px;
@@ -256,6 +256,7 @@ body{
 }
 #about-us-header{
     grid-row: 1;
+    margin-bottom: 60px;
 }
 #about-us #images{
     display: grid;
@@ -768,7 +769,7 @@ h2{
         bottom: 64%;
     }
     #about-us #about-us-header{
-        margin-bottom: 120px;
+        margin-bottom: 180px;
     }
     #about-us #head-span{
         margin: 0px;
@@ -1213,7 +1214,7 @@ h2{
         margin: 87px 0px 20px 0px;
     }
     #about-us #images{
-        margin-top: 100px;
+        margin-top: 40px;
         height: auto;
     }
     #header{
