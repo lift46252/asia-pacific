@@ -1110,7 +1110,7 @@ h2{
         margin-bottom: 11px;
     }
 }
-@media (min-width:769px) and (max-width: 1025px){
+@media (min-width:895px) and (max-width: 1025px){
     #our-projects #text{
         justify-self: center;
         display: grid;
