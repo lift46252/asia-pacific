@@ -1,1232 +1,1305 @@
 @font-face {
-    font-family: Noto Sans SC;
-    font-weight: normal;
-    src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Regular.otf);
-   }
-@font-face {
-    font-family: Noto Sans SC Bold;
-    src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
+  font-family: Noto Sans SC;
+  font-weight: normal;
+  src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Regular.otf);
 }
 @font-face {
-    font-family: Noto Sans SC;
-    font-weight: bold;
-    src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
+  font-family: Noto Sans SC Bold;
+  src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
 }
 @font-face {
-    font-family: Noto Sans SC;
-    font-weight: 900;
-    src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
+  font-family: Noto Sans SC;
+  font-weight: bold;
+  src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
+}
+@font-face {
+  font-family: Noto Sans SC;
+  font-weight: 900;
+  src: url(../assets/fonts/Nato-sans-sc/NotoSansSC-Bold.otf);
 }
 /* Боковое навигационное меню */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 ширина - изменить это с помощью JavaScript */
-    position: fixed; /* Оставайтесь на месте */
-    z-index: 3000; /* Оставайтесь сверху */
-    top: 0; /* Оставайтесь наверху */
-    right: 0;
-    background: #FFFFFF; /* Фон черный*/
-    overflow-x: hidden; /* Отключить горизонтальную прокрутку */
-    padding-top: 60px; /* Поместите контент в 60px сверху */
-    transition: 0.5s; /* 0.5 второй эффект перехода слайда в боковой навигации */
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 ширина - изменить это с помощью JavaScript */
+  position: fixed; /* Оставайтесь на месте */
+  z-index: 3000; /* Оставайтесь сверху */
+  top: 0; /* Оставайтесь наверху */
+  right: 0;
+  background: #ffffff; /* Фон черный*/
+  overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+  padding-top: 60px; /* Поместите контент в 60px сверху */
+  transition: 0.5s; /* 0.5 второй эффект перехода слайда в боковой навигации */
+}
+
+/* Ссылки меню навигации */
+.sidenav a {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 71px;
+  color: #404040;
+  text-decoration: none;
+  display: block;
+  margin-left: 26px;
+  transition: 0.3s;
+}
+
+/* Когда вы наводите курсор мыши на навигационные ссылки, изменяется их цвет */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Положение и стиль кнопки закрытия (верхний правый угол) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Стиль содержимого страницы - используйте это, если вы хотите сдвинуть содержимое страницы вправо при открытии боковой навигации */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* На экранах меньшего размера, где высота меньше 450px, измените стиль sidenav (меньше отступов и меньший размер шрифта) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
   }
-  
-  /* Ссылки меню навигации */
   .sidenav a {
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: normal;
     font-size: 18px;
-    line-height: 71px;
-    color: #404040;
-    text-decoration: none;
-    display: block;
-    margin-left: 26px;
-    transition: 0.3s;
   }
-  
-  /* Когда вы наводите курсор мыши на навигационные ссылки, изменяется их цвет */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Положение и стиль кнопки закрытия (верхний правый угол) */
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  /* Стиль содержимого страницы - используйте это, если вы хотите сдвинуть содержимое страницы вправо при открытии боковой навигации */
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
-  
-  /* На экранах меньшего размера, где высота меньше 450px, измените стиль sidenav (меньше отступов и меньший размер шрифта) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Noto Sans SC;
 }
-#header,#about-us,#what-we-offer,#benefits-to-you,#our-projects{
-    display: grid;
-    justify-items: center;
-    align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Noto Sans SC;
 }
-#nav{
-    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
-    background-blend-mode: color, normal;
-    opacity: 0.87;
-    position: fixed;
-    z-index: 3000;
-    width: 100%;
-    height: 67px;
-    display: grid;
-    justify-items: center;
-    align-items: center;
+#header,
+#about-us,
+#what-we-offer,
+#benefits-to-you,
+#our-projects {
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
-#nav h5{
-    margin:0;
-    font-size: 18px;
+#nav {
+  background: linear-gradient(
+      252.83deg,
+      rgba(249, 32, 32, 0.3328) 4.85%,
+      rgba(43, 102, 255, 0.2964) 98.69%
+    ),
+    #272727;
+  background-blend-mode: color, normal;
+  opacity: 0.87;
+  position: fixed;
+  z-index: 3000;
+  width: 100%;
+  height: 67px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
-#toggle{
-    justify-self: flex-end;
+#nav h5 {
+  margin: 0;
+  font-size: 18px;
+}
+#toggle {
+  justify-self: flex-end;
+  grid-row: 1;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 10px 20px;
+  display: none;
+}
+#toggle span {
+  font-size: 24px;
+}
+#telephone,
+#nav-pages {
+  grid-row: 1;
+}
+#telephone {
+  margin: 0% 0% 0% 9.44%;
+  font-family: Noto Sans SC Bold;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+  justify-self: flex-start;
+  text-decoration: none !important;
+}
+#nav-pages {
+  justify-self: flex-end;
+  margin: 0 25px;
+}
+#nav-pages a {
+  font-family: Noto Sans SC;
+  font-weight: normal;
+  margin: 0px 10px;
+  color: #ffffff;
+  text-decoration: none !important;
+}
+#header {
+  background-image: url(../assets/img/Rectangle\ 1.jpg);
+  padding: 67px 0px 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  height: 931px;
+}
+#header #title {
+  display: grid;
+}
+#header #title #h1-align {
+  justify-self: center;
+  margin: 0;
+  width: fit-content;
+  display: grid;
+}
+#header #title h1 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 96px;
+  text-align: left;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    6px 0px 0px rgba(255, 33, 33, 0.25), -8px 0px 0px rgba(27, 100, 209, 0.26);
+  color: #ffffff;
+  margin: 0;
+}
+#header #title h2 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  color: #f0efef;
+}
+#header #subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+#header #subtitle h4 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 41px;
+  margin: 0 20px;
+  text-align: center;
+  color: #f0efef;
+}
+#header #subtitle hr {
+  width: 89px;
+  height: 0px;
+  opacity: 0.5;
+  border: 2px solid #ffffff;
+  margin: 0;
+}
+#header #logos {
+  display: flex;
+  justify-content: center;
+}
+#header #logos .logo {
+  margin: 0px 20px;
+}
+#about-us {
+  background: linear-gradient(
+      252.83deg,
+      rgba(249, 32, 32, 0.16) 4.85%,
+      rgba(43, 102, 255, 0.1425) 98.69%
+    ),
+    #eeeaf1;
+  background-blend-mode: color, normal;
+  overflow: hidden;
+}
+#about-us h2 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 70px;
+  margin-top: 37px;
+  text-align: center;
+  color: #272727;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#about-us h6 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  color: #7b7581;
+}
+#about-us #text {
+  width: 524px;
+  height: 397px;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+  color: #000000;
+  z-index: 100;
+  grid-row: 1/1;
+  grid-column: 1/1;
+  position: relative;
+  bottom: 500px;
+}
+#about-us p:first-child {
+  padding-top: 16px;
+}
+#about-us #people {
+  z-index: 200;
+  position: relative;
+  left: 30px;
+}
+#about-us #head-span {
+  margin: 0px 33px 0px 64px;
+}
+#about-us p,
+#head-span {
+  display: inline-block;
+}
+#about-us-header {
+  grid-row: 1;
+  margin-bottom: 60px;
+}
+#about-us #images {
+  display: grid;
+  grid-row: 2;
+  justify-items: center;
+  align-items: flex-end;
+  position: relative;
+  bottom: -4px;
+  height: 825px;
+}
+#about-us #elipse-1,
+#elipse-2,
+#elipse-3,
+#people {
+  grid-row: 1/1;
+  grid-column: 1/1;
+}
+#about-us #people img {
+  width: 100vw;
+  max-width: 1139px !important;
+}
+#about-us #elipse-1 img {
+  max-width: 864px !important;
+}
+#about-us #elipse-2 img {
+  max-width: 672px !important;
+}
+#about-us #elipse-3 img {
+  max-width: 480px !important;
+}
+#about-us #elipse-1 {
+  z-index: 20;
+}
+#about-us #elipse-2 {
+  z-index: 30;
+}
+#about-us #elipse-3 {
+  z-index: 40;
+}
+#about-us p,
+#about-us pre {
+  margin: 0;
+}
+#what-we-offer {
+  width: min-content;
+  margin: 0 auto;
+}
+#what-we-offer h2 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 70px;
+  margin-top: 37px;
+  text-align: center;
+  color: #272727;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#what-we-offer h6 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  color: #7b7581;
+}
+#what-we-offer #cards-1,
+#cards-2,
+#cards-3,
+#content {
+  display: grid;
+}
+#what-we-offer .card {
+  border: 1px solid #f4e7f3;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
+  border-radius: 3px;
+  width: 377px;
+  max-height: 484px;
+  padding: 63px 42px;
+  display: grid;
+  justify-items: center;
+  margin: 10px;
+  background: white;
+}
+#what-we-offer .card h4,
+#what-we-offer #card-8 h4 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 48px 0px 0px 0px;
+  color: #555555;
+}
+#what-we-offer .card p,
+#what-we-offer #card-8 p {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  color: #555555;
+}
+#what-we-offer .avatar {
+  width: 142px;
+  height: 142px;
+  background: #f4e7f3;
+  border-radius: 50%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+#what-we-offer #cards-1 {
+  grid-column: 1;
+}
+#what-we-offer #cards-2 {
+  grid-column: 2;
+  margin-top: 25px;
+}
+#what-we-offer #cards-3 {
+  grid-column: 3;
+}
+#what-we-offer .card-1 {
+  grid-row: 1;
+}
+#what-we-offer .card-2 {
+  grid-row: 2;
+}
+#what-we-offer .card-3 {
+  grid-row: 3;
+}
+#what-we-offer #card-8 {
+  border: 1px solid #f4e7f3;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
+  border-radius: 3px;
+  width: 377px;
+  max-height: 615px;
+  padding: 63px 42px;
+  display: grid;
+  background: white;
+  justify-items: center;
+  margin: 10px 10px 75px 10px;
+}
+#what-we-offer #text-content {
+  grid-column: 2;
+}
+#benefits-to-you {
+  background: linear-gradient(
+      252.83deg,
+      rgba(249, 32, 32, 0.3328) 4.85%,
+      rgba(43, 102, 255, 0.2964) 98.69%
+    ),
+    #272727;
+  background-blend-mode: color, normal;
+}
+#benefits-to-you h2 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 70px;
+  margin-top: 37px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#benefits-to-you h6 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px 0px 29px 0px;
+  color: #7b7581;
+}
+#benefits-to-you #text {
+  width: 380px;
+  height: 300px;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  grid-row: 1;
+  grid-column: 2;
+  color: #ffffff;
+}
+#benefits-to-you #image {
+  grid-row: 1;
+  grid-column: 1;
+}
+#benefits-to-you #content {
+  display: grid;
+}
+#our-projects h2 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 70px;
+  margin-top: 37px;
+  text-align: center;
+  color: #272727;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#our-projects h6 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0px 0px 29px 0px;
+  text-transform: uppercase;
+  color: #7b7581;
+}
+#our-projects .card {
+  display: grid;
+  background: #ffffff;
+  border: 1px solid #f4e7f3;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  width: 278px;
+  height: 385px;
+}
+#our-projects .card .card-image {
+  align-items: center;
+  justify-items: center;
+  display: grid;
+  height: 200px;
+}
+#our-projects .card .card-text {
+  background: rgba(234, 234, 234, 0.5);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 3px;
+  font-family: Noto Sans SC;
+  height: 185px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #222222;
+  height: 160px;
+  padding: 21px 10px 0px 22px;
+}
+#our-projects .card .card-text h5 {
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  margin: 0;
+}
+#our-projects .cards {
+  display: grid;
+}
+#our-projects .group-1 {
+  grid-row: 1;
+  margin: 10px;
+}
+#our-projects .group-2 {
+  grid-row: 2;
+  margin: 10px;
+}
+#our-projects .card-p-1 {
+  display: inline-block;
+  vertical-align: top;
+}
+#our-projects .card-p-2 {
+  display: inline-block;
+  vertical-align: top;
+}
+#contact-us h2:first-child {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 70px;
+  margin-top: 37px;
+  text-align: center;
+  color: #272727;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
+}
+#contact-us h6 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0px 0px 29px 0px;
+  text-transform: uppercase;
+  color: #7b7581;
+}
+#contact-us iframe {
+  width: 100%;
+  height: 631px;
+}
+#contact-us #block {
+  width: 476px;
+  height: 503px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 20;
+}
+#contact-us #text hr {
+  width: 100%;
+  height: 0px;
+  border: 1px solid #dcdcdc;
+}
+#contact-us #text {
+  padding: 37px 49px;
+}
+#contact-us #back {
+  width: 100%;
+  height: 22px;
+  background: linear-gradient(
+      252.83deg,
+      rgba(249, 32, 32, 0.3328) 4.85%,
+      rgba(43, 102, 255, 0.2964) 98.69%
+    ),
+    #272727;
+  background-blend-mode: color, normal;
+  position: relative;
+  display: grid;
+  align-self: flex-end;
+}
+#contact-us #content {
+  display: grid;
+}
+#contact-us #content #block {
+  grid-row: 1;
+  grid-column: 1;
+  margin: 0% 10%;
+  align-self: center;
+  justify-self: end;
+  display: grid;
+}
+#contact-us #content #block h2 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  color: #555555;
+}
+#contact-us #content #block h1 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 35px;
+  text-transform: uppercase;
+
+  color: #333333;
+}
+#contact-us #content #block h3 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  color: #333333;
+  text-transform: uppercase;
+}
+#contact-us #content #block a,
+#contact-us #content #block h4 {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 4px;
+  text-decoration: none !important;
+  color: #333333;
+}
+#contact-us #content #map {
+  grid-row: 1;
+  grid-column: 1;
+  height: 631px;
+}
+footer {
+  display: grid;
+  background: linear-gradient(
+      252.83deg,
+      rgba(249, 32, 32, 0.3328) 4.85%,
+      rgba(43, 102, 255, 0.2964) 98.69%
+    ),
+    #272727;
+  background-blend-mode: color, normal;
+  padding: 2% 10%;
+}
+footer #qr-code {
+  width: 296px;
+  height: 296px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  justify-items: center;
+  align-items: center;
+}
+footer #qr-code div {
+  margin-bottom: 26px;
+}
+footer #qr-code div p {
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+footer #our-contacts {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #dedede;
+  margin: 0;
+  align-self: center;
+}
+footer #our-contacts img {
+  width: 165px;
+  height: 41px;
+  margin-top: 37px;
+}
+footer p {
+  margin: 0;
+}
+footer #our-contacts h5 {
+  line-height: 31px;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #dedede;
+  margin: 0;
+}
+footer #our-contacts h6 {
+  margin: 0px 0px 11px 0px;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #dedede;
+}
+footer #our-contacts p,
+footer #our-contacts a {
+  margin: 4.5px 0px;
+  text-decoration: none;
+}
+footer #our-contacts hr {
+  width: 30px;
+  height: 0px;
+  opacity: 0.5;
+  border: 2px solid #cccccc;
+  margin: 22px 0px;
+  align-self: center;
+}
+footer #info {
+  grid-column: 3;
+  grid-row: 1;
+  font-family: Noto Sans SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: right;
+
+  color: #ffffff;
+}
+h2 {
+  margin: 39px 0px 0px 0px;
+}
+
+.img-qr {
+  width: 150px;
+}
+@media (min-width: 768px) and (max-width: 999px) {
+  #benefits-to-you #image {
     grid-row: 1;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 10px 20px;
-    display: none;
-}
-#toggle span{
-    font-size: 24px;
-}
-#telephone,#nav-pages{
-    grid-row: 1;
-}
-#telephone{
-    margin: 0% 0% 0% 9.44%;
-    font-family: Noto Sans SC Bold;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 26px;
-    color: #FFFFFF;
-    justify-self: flex-start;
-    text-decoration: none!important;
-}
-#nav-pages{
-    justify-self: flex-end;
-    margin: 0 25px;
-}
-#nav-pages a{
-    font-family: Noto Sans SC;
-    font-weight: normal;
-    margin: 0px 10px;
-    color: #FFFFFF;
-    text-decoration: none!important;
-}
-#header{
-    background-image: url(../assets/img/Rectangle\ 1.jpg);
-    padding:67px 0px 0px 0px;
-    background-repeat: no-repeat;
+    grid-column: 1;
+    position: relative;
+    background: url(../assets/img/assets-mobile-version.png);
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    height: 931px;
-}
-#header #title{
-    display: grid;
-}
-#header #title #h1-align{
-    justify-self: center;
-    margin: 0;
-    width: fit-content;
-    display: grid;
-}
-#header #title h1{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: 900;
+    width: 300px;
+    height: 400px;
+    background-position-y: -40px;
+    background-position-x: -35px;
+    margin-right: 50px;
+  }
+  #benefits-to-you #text {
+    grid-row: 1;
+    grid-column: 2 !important;
+  }
+  #header #title h1 {
     font-size: 96px;
-    text-align: left;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 6px 0px 0px rgba(255, 33, 33, 0.25), -8px 0px 0px rgba(27, 100, 209, 0.26);
-    color: #FFFFFF;
-    margin: 0;
-}
-#header #title h2{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
+  }
+  #header #title h2 {
     font-size: 36px;
-    text-align: center;
-    color: #F0EFEF;
-}
-#header #subtitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0px;
-
-}
-#header #subtitle h4{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 41px;
-    margin: 0 20px;  
-    text-align: center;  
-    color: #F0EFEF;
-}
-#header #subtitle hr{
-    width: 89px;
-    height: 0px;
-    opacity: 0.5;
-    border: 2px solid #FFFFFF;
-    margin: 0;
-}
-#header #logos{
-    display: flex;
-    justify-content: center;
-}
-#header #logos .logo{
-    margin: 0px 20px;
-}
-#about-us{
-    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.16) 4.85%, rgba(43, 102, 255, 0.1425) 98.69%), #EEEAF1;
-    background-blend-mode: color, normal;
-    overflow: hidden;
-}
-#about-us h2{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 70px;
-    margin-top: 37px;
-    text-align: center;
-    color: #272727;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
-}
-#about-us h6{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin:0;
-    color: #7B7581;
-}
-#about-us #text{
-    width: 524px;
-    height: 397px;   
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 30px;
-    text-align: justify;  
-    color: #000000;
-    z-index: 100;
-    grid-row: 1/1;
-    grid-column: 1/1;
-    position: relative;
-    bottom: 500px;
-}
-#about-us p:first-child{
-    padding-top: 16px;
-}
-#about-us #people{
-    z-index: 200;
-    position: relative;
-    left: 30px;
-}
-#about-us #head-span{
-    margin:0px 33px 0px 64px;
-}
-#about-us p,#head-span{
-    display: inline-block;
-}
-#about-us-header{
-    grid-row: 1;
-    margin-bottom: 60px;
-}
-#about-us #images{
-    display: grid;
+  }
+  #what-we-offer .card {
+    margin: 10px 0px 10px 5px;
+    height: 484px;
+  }
+  #what-we-offer #card-8 {
+    height: 615px;
+  }
+  #nav,
+  .Navbar__Link {
+    font-size: 12px;
+  }
+  #about-us #text {
+    bottom: 64%;
+  }
+  #about-us #about-us-header {
+    margin-bottom: 180px;
+  }
+  #about-us #head-span {
+    margin: 0px;
+  }
+  #contact-us #content #block {
     grid-row: 2;
-    justify-items: center;
-    align-items: flex-end;
-    position: relative;
-    bottom: -4px;
-    height: 825px;
-}
-#about-us #elipse-1,#elipse-2,#elipse-3,#people{
-grid-row: 1/1;
-grid-column: 1/1;
-}
-#about-us #people img{
     width: 100vw;
-    max-width: 1139px!important;
-}
-#about-us #elipse-1 img{
-    max-width: 864px!important;
-}
-#about-us #elipse-2 img{
-    max-width: 672px!important;
-}
-#about-us #elipse-3 img{
-    max-width: 480px!important;
-}
-#about-us #elipse-1{
-    z-index: 20;
-}
-#about-us #elipse-2{
-    z-index: 30;
-}
-#about-us #elipse-3{
-    z-index: 40;
-}
-#about-us p,#about-us pre{
     margin: 0;
-}
-#what-we-offer{
-    width: min-content;
-    margin: 0 auto;
-}
-#what-we-offer h2{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 70px;
-    margin-top: 37px;
-    text-align: center;
-    color: #272727;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
-}
-#what-we-offer h6{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-    color: #7B7581;
-}
-#what-we-offer #cards-1,#cards-2,#cards-3,#content{
-    display: grid;
-}
-#what-we-offer .card{
-    border: 1px solid #F4E7F3;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
-    border-radius: 3px;
-    width: 377px;
-    max-height: 484px;
-    padding: 63px 42px;
-    display: grid;
-    justify-items: center;
-    margin: 10px;
-    background: white;
-}
-#what-we-offer .card h4,#what-we-offer #card-8 h4{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 48px 0px 0px 0px;
-    color: #555555;
-}
-#what-we-offer .card p,#what-we-offer #card-8 p{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 26px;
-    text-transform: uppercase;
-
-    color: #555555;
-
-}
-#what-we-offer .avatar{
-    width: 142px;
-    height: 142px;
-    background: #F4E7F3;
-    border-radius: 50%;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-#what-we-offer #cards-1{
-    grid-column: 1;
-}
-#what-we-offer #cards-2{
-    grid-column: 2;
-    margin-top: 25px;
-}
-#what-we-offer #cards-3{
-    grid-column: 3;
-}
-#what-we-offer .card-1{
-    grid-row: 1;
-}
-#what-we-offer .card-2{
-    grid-row: 2;
-}
-#what-we-offer .card-3{
-    grid-row: 3;
-}
-#what-we-offer #card-8{
-    border: 1px solid #F4E7F3;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.12));
-    border-radius: 3px;
-    width: 377px;
-    max-height: 615px;
-    padding: 63px 42px;
-    display: grid;
-    background: white;
-    justify-items: center;
-    margin: 10px 10px 75px 10px;
-}
-#what-we-offer #text-content{
-    grid-column: 2;
-}
-#benefits-to-you{
-    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
-    background-blend-mode: color, normal;
-}
-#benefits-to-you h2{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 70px;
-    margin-top: 37px;
-    text-align: center;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
-}
-#benefits-to-you h6{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0px 0px 29px 0px;
-    color: #7B7581; 
-}
-#benefits-to-you #text{
-    width: 376px;
-    height: 300px;
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 30px;
-    grid-row: 1;
-    grid-column: 2;
-    color: #FFFFFF;
-}
-#benefits-to-you #image{
-    grid-row: 1;
-    grid-column: 1;
-}
-#benefits-to-you #content{
-    display: grid;
-}
-#our-projects h2{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 70px;
-    margin-top: 37px;
-    text-align: center;
-    color: #272727;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
-}
-#our-projects h6{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
-    text-align: center;
-    margin: 0px 0px 29px 0px;
-    text-transform: uppercase;
-    color: #7B7581;
-}
-#our-projects .card{
-    display: grid;
-    background: #FFFFFF;
-    border: 1px solid #F4E7F3;
-    box-sizing: border-box;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.12);
-    border-radius: 3px;
-    width: 278px;
-    height: 385px;
-}
-#our-projects .card .card-image{
-    align-items: center;
-    justify-items: center;
-    display: grid;
-    height: 200px;
-}
-#our-projects .card .card-text{
-    background: rgba(234,234,234,0.5);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.08);
-    border-radius: 3px;
-    font-family: Noto Sans SC;
-    height: 185px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 10px;
-    text-transform: uppercase;
-    color: #222222;
-    height: 160px;
-    padding:21px 10px 0px 22px;
-
-}
-#our-projects .card .card-text h5{
-    font-size: 18px;
-    line-height: 26px;   
-    color: #333333;
-    margin:0;
-}
-#our-projects .cards{
-    display: grid;
-}
-#our-projects .group-1{
-    grid-row: 1;
-    margin: 10px;
-}
-#our-projects .group-2{
-    grid-row: 2;
-    margin: 10px;
-}
-#our-projects .card-p-1{
-    display: inline-block;
-    vertical-align: top;
-}
-#our-projects .card-p-2{
-    display: inline-block;
-    vertical-align: top;
-}
-#contact-us h2:first-child{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 70px;
-    margin-top: 37px;
-    text-align: center;
-    color: #272727;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 3px 0px 0px rgba(255, 33, 33, 0.15), -3px 0px 0px rgba(27, 100, 209, 0.16);
-}
-#contact-us h6{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 30px;
-    text-align: center;
-    margin: 0px 0px 29px 0px;
-    text-transform: uppercase;
-    color: #7B7581;
-}
-#contact-us iframe{
-    width: 100%;
-    height: 631px;
-}
-#contact-us #block{
-    width: 476px;
-    height: 503px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(8px);
-    z-index: 20;
-}
-#contact-us #text hr{
-    width: 100%;
-    height: 0px;
-    border: 1px solid #DCDCDC;
-}
-#contact-us #text{
-    padding: 37px 49px;    
-}
-#contact-us #back{
-    width: 100%;
-    height: 22px;
-    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
-    background-blend-mode: color, normal;
-    position: relative;
-    display: grid;
-    align-self: flex-end;
-}
-#contact-us #content{
-    display: grid;
-}
-#contact-us #content #block{
-    grid-row: 1;
-    grid-column: 1;
-    margin: 0% 10%;
-    align-self: center;
-    justify-self: end;
-    display: grid;
-}
-#contact-us #content #block h2{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    text-transform: uppercase;
-
-    color: #555555;
-}
-#contact-us #content #block h1{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 35px;
-    text-transform: uppercase;
-    
-    color: #333333;
-}
-#contact-us #content #block h3{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    margin: 0;
-    color: #333333;
-    text-transform: uppercase;
-}
-#contact-us #content #block a ,#contact-us #content #block h4{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    margin-top: 4px;
-    text-decoration: none!important;
-    color: #333333;
-}
-#contact-us #content #map{
-    grid-row: 1;
-    grid-column: 1;
-    height: 631px;
-}
-footer{
-    display: grid;
-    background: linear-gradient(252.83deg, rgba(249, 32, 32, 0.3328) 4.85%, rgba(43, 102, 255, 0.2964) 98.69%), #272727;
-    background-blend-mode: color, normal;
-    padding: 2% 10%;
-}
-footer #qr-code{
-    width: 296px;
-    height: 296px;
-    border-radius: 50%;
-    background: rgba(0, 0,0,0.1);
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
+  }
+  #our-projects #text {
     justify-self: center;
+    display: grid;
+    grid-column: 1/3;
+  }
+  #our-projects .cards:nth-last-of-type(2) {
+    grid-column: 2;
+  }
+  #our-projects .cards {
+    grid-row: 2;
+    justify-self: flex-end;
+  }
+  #our-projects #card-1,
+  #our-projects #card-5 {
+    grid-row: 1;
+  }
+  #our-projects #card-2,
+  #our-projects #card-6 {
+    grid-row: 2;
+  }
+  #our-projects #card-3,
+  #our-projects #card-7 {
+    grid-row: 3;
+  }
+  #our-projects #card-4,
+  #our-projects #card-8 {
+    grid-row: 4;
+  }
+  #what-we-offer #cards-1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #what-we-offer #cards-3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #what-we-offer #cards-2 {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+  #what-we-offer #text-content {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  #about-us #people {
+    left: 0px;
+  }
+  #about-us #text {
+    margin: 87px 0px 20px 0px;
+  }
+  footer {
+    padding: 2% 5%;
+  }
+  footer #info {
+    font-size: 11px;
+  }
+  #header #title h2 {
+    margin: 50px 0px;
+  }
+  #contact-us #content #block {
+    grid-row: 2/4;
+    width: 90vw;
+    margin: 0;
     align-self: center;
+    justify-self: center;
+  }
+  #contact-us #content #map {
+    grid-row: 1/3;
+  }
+  #about-us #people img {
+    max-width: 799px !important;
+  }
+  #about-us #elipse-1 img {
+    width: auto;
+    max-width: 617px !important;
+  }
+  #about-us #elipse-2 img {
+    width: auto;
+    max-width: 464px !important;
+  }
+  #about-us #elipse-3 img {
+    width: auto;
+    max-width: 333px !important;
+  }
+}
+@media (max-width: 767px) {
+  #about-us {
+    overflow: hidden;
+  }
+  #about-us #people img {
+    max-width: 459px !important;
+  }
+  #about-us #elipse-1 img {
+    width: auto;
+    max-width: 617px !important;
+  }
+  #about-us #elipse-2 img {
+    width: auto;
+    max-width: 464px !important;
+  }
+  #about-us #elipse-3 img {
+    width: auto;
+    max-width: 333px !important;
+  }
+  #about-us #elipse-1 {
+    z-index: 20;
+    overflow: hidden;
+  }
+  #about-us #elipse-2 {
+    z-index: 30;
+    overflow: hidden;
+  }
+  #about-us #elipse-3 {
+    z-index: 40;
+    overflow: hidden;
+  }
+  #nav-pages {
+    display: none !important;
+  }
+  #toggle {
+    display: grid !important;
+  }
+  #what-we-offer .card {
+    margin: 0px 0px 20px 0px;
+    width: 95vw;
+  }
+  #what-we-offer #card-8 {
+    margin: 0px 0px 20px 0px;
+    width: 95vw;
+  }
+  footer {
+    padding: 6% 10%;
+  }
+  footer #info,
+  footer #our-contacts,
+  footer #qr-code {
+    grid-column: 1;
     justify-items: center;
-    align-items: center;
-}
-footer #qr-code div{
-    margin-bottom: 26px;
-}
-footer #qr-code div p{
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
+    justify-self: center;
     text-align: center;
-    margin-bottom: 18px;
-    color: #FFFFFF;
-}
-footer #our-contacts{
+  }
+  footer #info {
+    grid-row: 3;
+  }
+  footer #our-contacts {
+    grid-row: 1;
+    display: grid;
+  }
+  footer #our-contacts hr {
+    justify-self: center;
+  }
+  footer #qr-code {
+    grid-row: 2;
+    margin: 46px 0px 46px 0px;
+  }
+  #our-projects .group-2,
+  #our-projects .group-1 {
+    grid-column: 1;
+    justify-self: center;
+  }
+  #our-projects .card {
+    width: 90vw;
+    height: auto;
+  }
+  #our-projects .card .card-text {
+    height: auto;
+    padding: 14px 17px !important;
+  }
+  #our-projects .card .card-image {
+    height: 123px;
+  }
+  #our-projects .card br:not(.br-special) {
+    display: none;
+  }
+  #our-projects #card-1 {
+    grid-row: 1;
+  }
+  #our-projects #card-2 {
+    grid-row: 2;
+  }
+  #our-projects #card-3 {
+    grid-row: 3;
+  }
+  #our-projects #card-4 {
+    grid-row: 4;
+  }
+  #our-projects #card-5 {
+    grid-row: 5;
+  }
+  #our-projects #card-6 {
+    grid-row: 6;
+  }
+  #our-projects #card-7 {
+    grid-row: 7;
+  }
+  #our-projects #card-8 {
+    grid-row: 8;
+  }
+  #our-projects h2 {
+    margin-top: 42px;
+  }
+  #our-projects h6 {
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+  #about-us #text {
+    font-size: 16px;
+    height: auto;
+    bottom: 34%;
+    width: 94%;
+    line-height: 26px;
+  }
+  #about-us #head-span {
+    margin: 0px;
+  }
+  #about-us #people {
+    left: 0px;
+  }
+
+  #header #title h1 {
+    font-size: 48px;
+  }
+  #header #title h1:nth-child(1) {
+    margin-top: 27px;
+  }
+  #header #title h2 {
+    font-size: 20px;
+    margin: 15px 0px 0px 0px;
+  }
+  #header #subtitle {
+    margin: 44px 0px 0px 0px;
+  }
+  #header #subtitle h4 {
+    font-size: 20px;
+  }
+  #header #logos {
+    margin: 0% 5% 5% 5% !important;
+  }
+  #header #logos .logo img {
+    width: 104%;
+  }
+  #header #logos .logo {
+    margin: 7px 10px;
+  }
+  #benefits-to-you #text {
+    width: 78%;
+  }
+  #contact-us iframe {
+    width: 100vw;
+    height: 631px;
+  }
+  #contact-us #content #block {
+    grid-row: 2/5;
+    width: 90vw;
+    margin: 0;
+    height: 413px;
+    align-self: center;
+    justify-self: center;
+  }
+  #contact-us #content #block #text hr {
+    margin: 20px 0px;
+  }
+  #contact-us #content #block #text h1 {
+    margin: 0;
+  }
+  #contact-us #content #map {
+    grid-row: 1/3;
+  }
+  #contact-us #content {
+    margin-bottom: 37px;
+  }
+  #contact-us #text {
+    padding: 25px 22px;
+  }
+  #what-we-offer .card,
+  #what-we-offer #card-8 {
+    padding: 26px 43px;
+  }
+  #what-we-offer #cards-1 {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 20px;
+  }
+  #what-we-offer #cards-2 {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+  }
+  #what-we-offer #cards-3 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  #what-we-offer #text-content {
     grid-column: 1;
     grid-row: 1;
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
+  }
+  #what-we-offer #text-content h2 {
+    margin-top: 18px;
+  }
+  #what-we-offer #text-content h6 {
+    font-size: 18px;
+  }
+  #what-we-offer .avatar {
+    width: 93px;
+    height: 93px;
+  }
+  #what-we-offer .avatar img {
+    width: 40%;
+    height: auto;
+  }
+  #what-we-offer .card h4,
+  #what-we-offer #card-8 h4 {
+    margin: 25px 0 0 0;
+  }
+  #about-us h2 {
+    margin-top: 8px;
+  }
+  #about-us h6 {
+    margin: 0;
     font-size: 18px;
     line-height: 26px;
-    color: #DEDEDE;
-    margin: 0;
-    align-self: center;
-}
-footer #our-contacts img{
-    width: 165px;
-    height: 41px;
-    margin-top:37px;
-}
-footer p{
-    margin: 0;
-}
-footer #our-contacts h5{
-    line-height: 31px;
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
+  }
+  h2:not(.special-h2) {
+    font-size: 36px !important;
+  }
+  #benefits-to-you #image {
+    grid-row: 2;
+    grid-column: 1;
+    position: relative;
+    background: url(../assets/img/assets-mobile-version.png);
+    background-size: 211%;
+    width: -webkit-fill-available;
+    background-position-x: -100px;
+    height: 500px;
+  }
+  #benefits-to-you h6 {
     font-size: 18px;
-    color: #DEDEDE;
-    margin: 0;
+    margin-bottom: 11px;
+  }
 }
-footer #our-contacts h6{
-    margin:0px 0px 11px 0px;
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-
-    color: #DEDEDE;
-}
-footer #our-contacts p, footer #our-contacts a{
-    margin: 4.5px 0px;
-    text-decoration: none;
-}
-footer #our-contacts hr{
-    width: 30px;
-    height: 0px;
-    opacity: 0.5;
-    border: 2px solid #CCCCCC;
-    margin: 22px 0px;
-    align-self: center;
-}
-footer #info{
-    grid-column: 3;
+@media (min-width: 895px) and (max-width: 1025px) {
+  #our-projects #text {
+    justify-self: center;
+    display: grid;
+    grid-column: 1/3;
+  }
+  #our-projects .cards {
+    justify-self: flex-end;
+  }
+  #our-projects #card-1,
+  #our-projects #card-2,
+  #our-projects #card-3 {
     grid-row: 1;
-    font-family: Noto Sans SC;
-    font-style: normal;
-    font-weight: bold;
+  }
+  #our-projects #card-4,
+  #our-projects #card-5,
+  #our-projects #card-6 {
+    grid-row: 2;
+  }
+  #our-projects #card-7,
+  #our-projects #card-8 {
+    grid-row: 3;
+  }
+  #our-projects #card-1,
+  #our-projects #card-4,
+  #our-projects #card-7 {
+    grid-column: 1;
+  }
+  #our-projects #card-2,
+  #our-projects #card-5,
+  #our-projects #card-8 {
+    grid-column: 2;
+  }
+  #our-projects #card-3,
+  #our-projects #card-6 {
+    grid-column: 3;
+  }
+  #about-us #text {
     font-size: 18px;
-    line-height: 36px;
-    text-align: right;
-
-    color: #FFFFFF;
+    bottom: 67%;
+  }
+  #about-us #head-span {
+    margin: 0px 0px;
+  }
+  #what-we-offer #cards-1 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #what-we-offer #cards-3 {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #what-we-offer #cards-2 {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+  #what-we-offer #text-content {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  #header #title h1 {
+    font-size: 96px;
+  }
+  #header #title h2 {
+    font-size: 36px;
+  }
+  #about-us h6 {
+    margin: 0px 0px 130px 0px;
+  }
+  #about-us #people img {
+    max-width: 799px !important;
+  }
+  #about-us #elipse-1 img {
+    width: auto;
+    max-width: 617px !important;
+  }
+  #about-us #elipse-2 img {
+    width: auto;
+    max-width: 464px !important;
+  }
+  #about-us #elipse-3 img {
+    width: auto;
+    max-width: 333px !important;
+  }
+  #benefits-to-you #image {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    background: url(../assets/img/assets-mobile-version.png);
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+    background-position-y: -40px;
+    background-position-x: -35px;
+    margin-right: 100px;
+  }
+  #benefits-to-you #text {
+    grid-row: 1;
+    grid-column: 2 !important;
+  }
 }
-h2{
-    margin: 39px 0px 0px 0px;
-}
-@media (min-width: 768px) and (max-width: 999px){
-    #benefits-to-you #image{
-        grid-row: 1;
-        grid-column: 1;
-        position: relative;
-        background: url(../assets/img/assets-mobile-version.png);
-        background-size: cover;
-        width: 300px;
-        height: 400px;
-        background-position-y: -40px;
-        background-position-x: -35px;
-        margin-right: 50px;
-    }
-    #benefits-to-you #text{
-        grid-row: 1;
-        grid-column: 2!important;
-    }
-    #header #title h1 {
-        font-size: 96px;
-    }
-    #header #title h2 {
-        font-size: 36px;
-    }
-    #what-we-offer .card{
-        margin: 10px 0px 10px 5px;
-        height: 484px;
-    }
-    #what-we-offer #card-8{
-        height: 615px;
-    }
-    #nav,.Navbar__Link{
-        font-size: 12px;
-    }
-    #about-us #text{
-        bottom: 64%;
-    }
-    #about-us #about-us-header{
-        margin-bottom: 180px;
-    }
-    #about-us #head-span{
-        margin: 0px;
-    }
-    #contact-us #content #block {
-        grid-row: 2;
-        width: 100vw;
-        margin: 0;
-    }
-    #our-projects #text{
-        justify-self: center;
-        display: grid;
-        grid-column: 1/3;
-    }
-    #our-projects .cards:nth-last-of-type(2){
-        grid-column: 2;
-    }
-    #our-projects .cards{
-        grid-row: 2;
-        justify-self: flex-end;
-    }
-    #our-projects  #card-1, #our-projects #card-5{
-        grid-row: 1;
-    }
-    #our-projects #card-2, #our-projects #card-6{
-        grid-row: 2;
-    }
-    #our-projects #card-3, #our-projects #card-7{
-        grid-row: 3;
-    }
-    #our-projects #card-4, #our-projects #card-8{
-        grid-row: 4;
-    }
-    #what-we-offer #cards-1{
-        grid-column: 1;
-        grid-row: 2;
-    }
-    #what-we-offer #cards-3{
-        grid-column: 2;
-        grid-row: 2;
-    }
-    #what-we-offer #cards-2{
-        grid-column: 1/3;
-        grid-row: 4;
-    }
-    #what-we-offer #text-content{
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-    #about-us #people{
-        left: 0px;
-    }
-    #about-us #text{
-        margin: 87px 0px 20px 0px;
-    }
-    footer{
-        padding: 2% 5%;
-    }
-    footer #info {
-        font-size: 11px;
-    }
-    #header #title h2{
-        margin: 50px 0px;
-    }
-    #contact-us #content #block {
-        grid-row: 2/4;
-        width: 90vw;
-        margin: 0;
-        align-self: center;
-        justify-self: center;
-    }
-    #contact-us #content #map{
-        grid-row: 1/3;
-    }
-    #about-us #people img{
-        max-width: 799px!important;
-    }
-    #about-us #elipse-1 img{
-        width: auto;
-        max-width: 617px!important;
-    }
-    #about-us #elipse-2 img{
-        width: auto;
-        max-width: 464px!important;
-    }
-    #about-us #elipse-3 img{
-        width: auto;
-        max-width: 333px!important;
-    }
-}
-@media (max-width: 767px){
-    #about-us {
-        overflow: hidden;
-    }
-    #about-us #people img{
-        max-width: 459px!important;
-    }
-    #about-us #elipse-1 img{
-        width: auto;
-        max-width: 617px!important;
-    }
-    #about-us #elipse-2 img{
-        width: auto;
-        max-width: 464px!important;
-    }
-    #about-us #elipse-3 img{
-        width: auto;
-        max-width: 333px!important;
-    }
-    #about-us #elipse-1{
-        z-index: 20;
-        overflow: hidden;
-    }
-    #about-us #elipse-2{
-        z-index: 30;
-        overflow: hidden;
-    }
-    #about-us #elipse-3{
-        z-index: 40;
-        overflow: hidden;
-    }
-    #nav-pages{
-        display: none!important;
-    }
-    #toggle{
-        display: grid!important;
-    }
-    #what-we-offer .card{
-        margin: 0px 0px 20px 0px;
-        width: 95vw;
-    }
-    #what-we-offer #card-8{
-        margin: 0px 0px 20px 0px;
-        width: 95vw;
-    }
-    footer{
-        padding: 6% 10%;
-    }
-    footer #info,footer #our-contacts,footer #qr-code{
-        grid-column: 1;
-        justify-items: center;
-        justify-self: center;
-        text-align: center;
-    }
-    footer #info{
-        grid-row: 3;
-    }
-    footer #our-contacts{
-        grid-row: 1;
-        display: grid;
-    }
-    footer #our-contacts hr{
-        justify-self: center;
-    }
-    footer #qr-code{
-        grid-row: 2;
-        margin: 46px 0px 46px 0px;
-    }
-    #our-projects .group-2, #our-projects .group-1{
-        grid-column: 1;
-        justify-self: center;
-    }
-    #our-projects .card{
-        width: 90vw;
-        height: auto;
-    }
-    #our-projects .card .card-text{
-        height: auto;
-        padding: 14px 17px!important;
-    }
-    #our-projects .card .card-image{
-        height: 123px;
-    }
-    #our-projects .card br:not(.br-special){
-        display: none;
-    }
-    #our-projects #card-1{
-        grid-row: 1;
-    }
-    #our-projects #card-2{
-        grid-row: 2;
-    }
-    #our-projects #card-3{
-        grid-row: 3;
-    }
-    #our-projects #card-4{
-        grid-row: 4;
-    }
-    #our-projects #card-5{
-        grid-row: 5;
-    }
-    #our-projects #card-6{
-        grid-row: 6;
-    }
-    #our-projects #card-7{
-        grid-row: 7;
-    }
-    #our-projects #card-8{
-        grid-row: 8;
-    }
-    #our-projects h2{
-        margin-top: 42px;
-    }
-    #our-projects h6{
-        font-size: 18px;
-        margin-bottom: 11px;
-    }
-    #about-us #text{
-        font-size: 16px;
-        height: auto;
-        bottom: 34%;
-        width: 94%;
-        line-height: 26px;
-    }
-    #about-us #head-span{
-        margin: 0px;
-    }
-    #about-us #people{
-        left: 0px;
-    }
-
-    #header #title h1 {
-        font-size: 48px;
-    }
-    #header #title h1:nth-child(1){
-        margin-top: 27px;        
-    }
-    #header #title h2 {
-        font-size: 20px;
-        margin: 15px 0px 0px 0px;
-    }
-    #header #subtitle{
-        margin: 44px 0px 0px 0px;
-    }
-    #header #subtitle h4{
-        font-size: 20px;
-    }
-    #header #logos{
-        margin: 0% 5% 5% 5%!important;
-    }
-    #header #logos  .logo img{
-        width: 104%;
-    }
-    #header #logos .logo{
-        margin: 7px 10px;
-    }
-    #benefits-to-you #text{
-        width: 78%;
-    }
-    #contact-us iframe{
-        width: 100vw;
-        height: 631px;
-    }
-    #contact-us #content #block {
-        grid-row: 2/5;
-        width: 90vw;
-        margin: 0;
-        height: 413px;
-        align-self: center;
-        justify-self: center;
-    }
-    #contact-us #content #block #text hr{
-        margin: 20px 0px;
-    }
-    #contact-us #content #block #text h1{
-        margin: 0;
-    }
-    #contact-us #content #map{
-        grid-row: 1/3;
-    }
-    #contact-us #content{
-        margin-bottom: 37px;
-    }
-    #contact-us #text {
-        padding: 25px 22px;
-    }
-    #what-we-offer .card,#what-we-offer #card-8{
-        padding: 26px 43px;
-    }
-    #what-we-offer #cards-1{
-        grid-column: 1;
-        grid-row: 2;
-        margin-top: 20px;
-    }
-    #what-we-offer #cards-2{
-        grid-column: 1;
-        grid-row: 3;
-        margin: 0;
-    }
-    #what-we-offer #cards-3{
-        grid-column: 1;
-        grid-row: 4;
-    }
-    #what-we-offer #text-content{
-        grid-column: 1;
-        grid-row: 1;
-    }
-    #what-we-offer #text-content h2{
-        margin-top: 18px;
-    }
-    #what-we-offer #text-content h6{
-        font-size: 18px;
-    }
-    #what-we-offer .avatar{
-        width: 93px;
-        height: 93px;
-    }
-    #what-we-offer .avatar img{
-        width: 40%;
-        height: auto;
-    }
-    #what-we-offer .card h4, #what-we-offer #card-8 h4{
-        margin: 25px 0 0 0 ;
-    }
-    #about-us h2{
-        margin-top: 8px;
-    }
-    #about-us h6 {
-        margin: 0;
-        font-size: 18px;
-        line-height: 26px;
-    }
-    h2:not(.special-h2){
-        font-size: 36px!important;
-    }
-    #benefits-to-you #image{
-        grid-row: 2;
-        grid-column: 1;
-        position: relative;
-        background: url(../assets/img/assets-mobile-version.png);
-        background-size: 211%;
-        width: -webkit-fill-available;
-        background-position-x: -100px;
-        height: 500px;
-    }
-    #benefits-to-you h6{
-        font-size: 18px;
-        margin-bottom: 11px;
-    }
-}
-@media (min-width:895px) and (max-width: 1025px){
-    #our-projects #text{
-        justify-self: center;
-        display: grid;
-        grid-column: 1/3;
-    }
-    #our-projects .cards{
-        justify-self: flex-end;
-    }
-    #our-projects  #card-1, #our-projects #card-2,#our-projects #card-3{
-        grid-row: 1;
-    }
-    #our-projects #card-4, #our-projects #card-5, #our-projects #card-6{
-        grid-row: 2;
-    }
-    #our-projects #card-7, #our-projects #card-8{
-        grid-row: 3;
-    }
-    #our-projects  #card-1, #our-projects #card-4,#our-projects #card-7{
-        grid-column: 1;
-    }
-    #our-projects #card-2, #our-projects #card-5, #our-projects #card-8{
-        grid-column: 2;
-    }
-    #our-projects #card-3, #our-projects #card-6{
-        grid-column: 3;
-    }
-    #about-us #text{
-        font-size: 18px;
-        bottom: 67%
-    }
-    #about-us #head-span{
-        margin:0px 0px;
-    }
-    #what-we-offer #cards-1{
-        grid-column: 1;
-        grid-row: 2;
-    }
-    #what-we-offer #cards-3{
-        grid-column: 2;
-        grid-row: 2;
-    }
-    #what-we-offer #cards-2{
-        grid-column: 1/3;
-        grid-row: 4;
-    }
-    #what-we-offer #text-content{
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-    #header #title h1 {
-        font-size: 96px;
-    }
-    #header #title h2 {
-        font-size: 36px;
-    }
-    #about-us h6 {
-        margin: 0px 0px 130px 0px;
-    }
-    #about-us #people img{
-        max-width: 799px!important;
-    }
-    #about-us #elipse-1 img{
-        width: auto;
-        max-width: 617px!important;
-    }
-    #about-us #elipse-2 img{
-        width: auto;
-        max-width: 464px!important;
-    }
-    #about-us #elipse-3 img{
-        width: auto;
-        max-width: 333px!important;
-    }
-    #benefits-to-you #image{
-        grid-row: 1;
-        grid-column: 1;
-        position: relative;
-        background: url(../assets/img/assets-mobile-version.png);
-        background-size: cover;
-        width: 300px;
-        height: 400px;
-        background-position-y: -40px;
-        background-position-x: -35px;
-        margin-right: 100px;
-    }
-    #benefits-to-you #text{
-        grid-row: 1;
-        grid-column: 2!important;
-    }
-}
-@media (max-width: 1025px){
-    #benefits-to-you #image img{
-        display: none;
-    }
-    #benefits-to-you #text{
-        grid-row: 1;
-        grid-column: 1;
-        justify-self: center;
-    }
-    #about-us #text{
-        margin: 87px 0px 20px 0px;
-    }
-    #about-us #images{
-        margin-top: 40px;
-        height: auto;
-    }
-    #header{
-        height: auto !important;
-    }
-    #header #logos{
-        margin-bottom: 8%;
-    }
-    #header{
-        background-position-x: 28%;
-    }
-    #header #title{
-        padding-top: 30%;
-    }
+@media (max-width: 1025px) {
+  #benefits-to-you #image img {
+    display: none;
+  }
+  #benefits-to-you #text {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+  }
+  #about-us #text {
+    margin: 87px 0px 20px 0px;
+  }
+  #about-us #images {
+    margin-top: 40px;
+    height: auto;
+  }
+  #header {
+    height: auto !important;
+  }
+  #header #logos {
+    margin-bottom: 8%;
+  }
+  #header {
+    background-position-x: 28%;
+  }
+  #header #title {
+    padding-top: 30%;
+  }
 }
